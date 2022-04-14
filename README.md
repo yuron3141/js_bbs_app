@@ -1,5 +1,6 @@
-# express_chat_app
+# js_bbs_app
 JavaScriptで作られた簡易掲示板(Webアプリ)です。
+Node.jsとExpress、各種モジュールで構築できます。
 CSSフレームワークには「Buluma」を使用しています。
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=JavaScript&style=flat&logoColor=white)
