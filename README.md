@@ -5,7 +5,7 @@ CSSフレームワークには「Buluma」を使用しています。
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=JavaScript&style=flat&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-6DA55F.svg?logo=node.js&style=flat&logoColor=white)
 
-![Image 1](https://yuuronacademy.com/wp-content/uploads/2022/04/app1_1.jpg)
+![Image 1](https://yuuronacademy.com/wp-content/uploads/2022/04/app2_1.jpg)
 
 ## 環境構築
 Node.jsの実行環境を用意した後に、このリポジトリを各自のPCの適切な場所にクローンしてください。
@@ -38,6 +38,7 @@ sqlite3> create table threads(id INTEGER, thread_id TEXT, thread_name TEXT, com_
 sqlite3> create table users(id INTEGER, ip_address TEXT, thread_created_date NUMRIC, created_sum INTEGER,last_comment_date NUMRIC, PRIMARY KEY(id AUTOINCREMENT))
 ```
 またテーブル設計のパラメータは以下の通りです
+
 ・threads
 | id | thread_id | thread_name | com_sum | wrote_at | created_at | ip_address | del_flag |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
