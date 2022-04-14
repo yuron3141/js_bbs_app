@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja"> 
+    <head>
+        <title>Yちゃんねる</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    </head>
+    <body>
+        <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <div class="has-text-centered">
+                <h1 class="is-size-3 m-2">Yちゃんねる</h1>
+            </div>
+        </nav>
+        <main>
+            <div>
+                <div class="m-5 block notification has-background-success-light box">
+                    <span class="button is-medium is-info has-text-weight-bold">
+                        掲示板
+                    </span>
+                    <div class="pt-3">
+                        <h1><strong>Yちゃんねるへようこそ！</strong></h1>
+                    </div>
+                    <div class="pt-3">
+                        <p>当サイトは有名なネット掲示板である5ちゃんねるの簡易クローンアプリとして作成されました。</p>
+                        <p>誰でもスレッドの作成と書き込みが可能ですが、以下のような注意点があるのでサイトを使用する前にご確認ください。</p>
+                    </div>
+                    <div class="m-2 block notification has-background-warning-light scroll" style="height:15em;">
+                        <p class="is-size-4" style="font-weight: bold;">●注意事項</p>
+                        <ul class="has-text-weight-bold">
+                            <li>●1人が1日に作成できるスレッド数は最大5つです</li>
+                            <li>●1スレッドに書き込み可能なレス数は1000です</li>
+                            <li>●スレッド名の最大文字数は64文字です</li>
+                            <li>●レスに設定可能な名前の最大文字数は16文字です</li>
+                            <li>●レスに書ける最大文字数は1024文字です</li>
+                        </ul>
+                        <br>
+                        <p class="is-size-4" style="font-weight: bold;">●使用マナー</p>
+                        <ul class="has-text-weight-bold">
+                            <li>●芸能人や公人ではない一般人の誹謗中傷、プライバシー暴露は禁止してます</li>
+                            <li>●暴言や第3者を不快にさせるような発言はやめましょう</li>
+                            <li>●人間的モラルやルール・ネットマナーに反した発言はやめましょう</li>
+                        </ul>
+                    </div>
+                
+                </div>
+                <div class="m-5 block notification has-background-success-light box">
+                    <span class="button is-medium is-info has-text-weight-bold">
+                        主なスレッド一覧
+                    </span>
+                    <!--<div class="p-1 has-text-link"><a href="#">全スレッドはこちらから</a></div>-->
+                    <div class="m-2 block notification has-background-primary-light scroll" style="height:20em;">
+                        <ul id="threads" class="is-size-5">
+                            
+                        </ul>
+                    </div>           
+                </div>
+            </div>
+            <div id="Popcontent">
+                <!--掲示コンテンツ3つ-->
+                <div class="m-5 block notification has-background-light box">
+                    <span id="less" class="button is-medium is-info has-text-weight-bold">
+                    </span>
+                    <h1 id="TITLE" class="is-size-4 has-text-danger-dark"></h1>
+                    <div>
+                        <ul id="FIRST" class="pb-6">
+                            
+                        </ul>
+                        <ul id="HERE">
+                            
+                        </ul>
+                    </div>
+                    <div class="m-4">
+                        <div clas="panel-block">
+                            <span class="p-1 has-text-link"><a id="Allread" href="#">全部読む</a></span>
+                            <span class="p-1 has-text-link"><a id="latest50" href="#">最新50</a></span>
+                            <span class="p-1 has-text-link"><a id="to100" href="#">1-100</a></span>
+                        </div>
+                    </div>
+                    <div class="m-4">
+                        <span class="button is-medium is-info has-text-weight-bold">
+                            書き込み欄
+                        </span>
+                        <div class="m-2">
+                            <div id="notifiers2" class="m-2">
+                            </div>
+                            <form id="inputThread2" method="post">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button has-background-light" type="submit">書き込む</button>
+                                    </div>
+                                </div>                      
+                                <div class="columns">
+                                    <div class="column is-2 p-1">
+                                        <label class="label p-2">名前：</label>
+                                    </div>
+                                    <div class="column p-1">
+                                        <input id="inputnameDom2" class="input" type="text" placeholder="名前:(省略可)"> 
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea id="inputcontentsDom2" class="textarea" placeholder="コメント内容"></textarea>
+                                    </div>
+                                </div>
+                                <input id="thread_ID" type="hidden" name="threadid" value="">
+                                <input id="thread_Name" type="hidden" name="threadName" value="">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="notifiers" class="m-5">
+            </div>
+            <div>
+                <div class="m-5 block notification has-background-primary box">
+                    <span class="button is-medium is-info has-text-weight-bold">
+                        新規スレッドの作成
+                    </span>
+                    <div class="m-2">
+                        <form id="inputThread" method="post">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button has-background-light" type="submit">新規スレッドの作成</button>
+                                </div>
+                            </div>                      
+                            <div class="columns">
+                                <div class="column is-3 p-1">
+                                    <label class="label p-2">スレッドタイトル：</label>
+                                </div>
+                                <div class="column p-1">
+                                    <input id="inputthreadDom" class="input" type="text">
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-2 p-1">
+                                    <label class="label p-2">名前：</label>
+                                </div>
+                                <div class="column p-1">
+                                    <input id="inputnameDom" class="input" type="text" placeholder="名前:(省略可)"> 
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <textarea id="inputcontentsDom" class="textarea" placeholder="コメント内容"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>        
+                </div>
+            </div>
+        </main>
+        <footer class="has-background-info-light">
+            <div class="m-4 has-text-centered ">
+                last modified at 2022/04/11 19:28:56 JST
+            </div>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</html>
